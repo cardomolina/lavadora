@@ -1,6 +1,6 @@
 let Ciclo = 0
 basic.forever(function () {
-    Ciclo = 6
+    Ciclo = 3
     if (Ciclo == 0) {
         basic.showLeds(`
             # # # # #
@@ -20,12 +20,28 @@ basic.forever(function () {
                 . . . . .
                 `)
             basic.pause(100)
+            basic.showLeds(`
+                . # # # .
+                . . # . .
+                # # # # .
+                . . . # .
+                . . # # #
+                `)
+            basic.pause(100)
         } else {
             if (Ciclo == 2) {
                 basic.showLeds(`
                     # # . # #
                     # # # # #
                     . # # # .
+                    . # # # .
+                    . # # # .
+                    `)
+                basic.pause(100)
+                basic.showLeds(`
+                    . . . . .
+                    # # . # #
+                    # # # # #
                     . # # # .
                     . # # # .
                     `)
@@ -99,6 +115,7 @@ basic.forever(function () {
                                 . . . # .
                                 . . . . .
                                 `)
+                            basic.pause(100)
                         } else {
                             basic.showLeds(`
                                 # . # . #
@@ -115,6 +132,7 @@ basic.forever(function () {
                                 . # # # .
                                 . . . . .
                                 `)
+                            basic.pause(100)
                         }
                     }
                 }
